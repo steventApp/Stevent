@@ -16,6 +16,7 @@ CREATE TABLE events (
     tempat varchar(100),
     deskripsi text,
     user_id varchar(10),
+    harga integer,
     CONSTRAINT events_pk PRIMARY KEY (event_id) ENABLE,
     CONSTRAINT events_fk FOREIGN KEY (usr_id)
         REFERENCES users(user_id) ON DELETE CASCADE ENABLE
@@ -80,16 +81,16 @@ INSERT INTO USERS(user_id,nama,alamat,tempat_lahir,tanggal_lahir,pass,roles)
 VALUES ('U_011', 'Hito', 'Perata Buah Batu', 'Jambi', '14-01-1999','astronaut','pelanggan');
 
 
-insert into events values('E_001', 'UI UX Workshop', '2019-09-03 09:00:00', 'Telkom University', 'Workshop mengenai User Interface dan User Experience', 'U_006');
-insert into events values('E_002', 'Techweek', '2019-09-10 09:00:00', 'Telkom University', 'Workshop mengenai Website', 'U_006');
-insert into events values('E_003', 'Net.Conf', '2019-09-17 09:00:00', 'Telkom University', 'Workshop mengenai Jaringan Dasar dan Konfigurasinya', 'U_006');
-insert into events values('E_004', 'Data Debunked Day', '2019-09-24 09:00:00', 'Telkom University', 'Seminar mengenai Big Data', 'U_006');
-insert into events values('E_005', 'Lets Talk With Modern Journalism', '2019-10-01 09:00:00', 'Telkom University', 'Seminar mengenai jurnalis modern', 'U_006');
-insert into events values('E_006', 'Royal League', '2019-10-08 09:00:00', 'Telkom University', 'Turnamen Game PUBG Mobile', 'U_006');
-insert into events values('E_007', 'Mengenal Lebih Dekat Tentang TA ICM', '2019-09-01 09:00:00', 'Telkom University', 'Seminar yang membahas TA bidang ICM', 'U_007');
-insert into events values('E_008', 'Pelatihan TensorFlow.js', '2019-10-01 09:00:00', 'Telkom University', 'Workshop tentang TensorFlow.js', 'U_007');
-insert into events values('E_009', 'Pra-Event Nihon No Matsuri', '2019-10-9 09:00:00', 'BEC Mall', 'Acara Pra-Event dari Festival Jepang Nihon No Matsuri', 'U_008');
-insert into events values('E_010', 'Nihon No Matsuri', '2019-10-19 09:00:00', 'Telkom University', 'Festival Jepang', 'U_008');
+insert into events values('E_001', 'UI UX Workshop', '2019-09-03 09:00:00', 'Telkom University', 'Workshop mengenai User Interface dan User Experience', 'U_006',10000);
+insert into events values('E_002', 'Techweek', '2019-09-10 09:00:00', 'Telkom University', 'Workshop mengenai Website', 'U_006',15000);
+insert into events values('E_003', 'Net.Conf', '2019-09-17 09:00:00', 'Telkom University', 'Workshop mengenai Jaringan Dasar dan Konfigurasinya', 'U_006',12000);
+insert into events values('E_004', 'Data Debunked Day', '2019-09-24 09:00:00', 'Telkom University', 'Seminar mengenai Big Data', 'U_006',12000);
+insert into events values('E_005', 'Lets Talk With Modern Journalism', '2019-10-01 09:00:00', 'Telkom University', 'Seminar mengenai jurnalis modern', 'U_006',180000);
+insert into events values('E_006', 'Royal League', '2019-10-08 09:00:00', 'Telkom University', 'Turnamen Game PUBG Mobile', 'U_006',10500);
+insert into events values('E_007', 'Mengenal Lebih Dekat Tentang TA ICM', '2019-09-01 09:00:00', 'Telkom University', 'Seminar yang membahas TA bidang ICM', 'U_007',40000);
+insert into events values('E_008', 'Pelatihan TensorFlow.js', '2019-10-01 09:00:00', 'Telkom University', 'Workshop tentang TensorFlow.js', 'U_007',40000);
+insert into events values('E_009', 'Pra-Event Nihon No Matsuri', '2019-10-9 09:00:00', 'BEC Mall', 'Acara Pra-Event dari Festival Jepang Nihon No Matsuri', 'U_008',50000);
+insert into events values('E_010', 'Nihon No Matsuri', '2019-10-19 09:00:00', 'Telkom University', 'Festival Jepang', 'U_008',50000);
 
 
 INSERT INTO categories(category_id,nama)
