@@ -1,0 +1,11 @@
+<?php 
+include 'koneksi.php';
+$nama = $_POST['nama'];
+$alamat = $_POST['alamat'];
+$tempat_lahir = $_POST['tempat_lahir'];
+$tanggal_lahir = $_POST['tanggal_lahir'];
+$pass = $_POST['pass'];
+$role = $_POST['role'];
+mysql_query("INSERT INTO user VALUES('$nama','$alamat','$tempat_lahir','$tanggal_lahir','$pass','$role')");
+header("location:index.php?pesan=input");
+?>
