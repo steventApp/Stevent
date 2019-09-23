@@ -17,6 +17,7 @@ CREATE TABLE events (
     deskripsi text,
     user_id varchar(10),
     harga integer,
+    status varchar(10),
     CONSTRAINT events_pk PRIMARY KEY (event_id) ENABLE,
     CONSTRAINT events_fk FOREIGN KEY (usr_id)
         REFERENCES users(user_id) ON DELETE CASCADE ENABLE
