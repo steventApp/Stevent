@@ -142,4 +142,32 @@ body{
     height: 300px;
     position: absolute;
     z-index: 10;
+    border-radius: 5px;
+}
+.Stev-organizers-create-event-plus{
+    position: relative;
+    z-index: 11;
+    left: 25%;
+    top: 15%;
+    color: white;
+    font-size: 96pt;
+}
+.Stev-organizers-create-event-newEvent{
+    position: relative;
+    z-index: 11;
+    left: 25%;
+    color: white;
+    font-size: 16pt;
+}
+.Stev-organizers-create-event:hover .Stev-organizers-create-event-cover{
+    opacity: 0.6;
+    cursor: pointer;
+} 
+.Stev-organizers-create-event-title{
+    position: relative;
+    z-index: 11;
+    left: 8px;
+    color: white;
+    font-size: 16pt;
+    font-weight: bold;
 }

@@ -5,14 +5,18 @@
     <div class="row justify-content-center py-4">
         <div class="col-md-8 mb-4 py-4">
             <p>Search Event</p>
-            <div class="row">
-                <div class="col-md-10">
-                    <input type="text" class="form-control Stev-form-control" placholder="Search">
-                </div>
-                <div class="col-md-2">
-                    <button class="btn Stev-Button-Search px-4">Search</button>
-                </div>
-            </div>
+                <form action="{{route('home.search')}}" method="POST" class="row">
+                    @csrf
+                    <div class="col-md-10">
+                        <input type="text" name="search" class="form-control Stev-form-control" placholder="Search" value="{{$search}}">
+                        @if ($search != "")
+                            <a href="{{route('home')}}" class="text-danger" style="cursor:pointer"><div class="pt-2"><i class="fa fa-close"></i> Clear Search</div></a>
+                        @endif
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn Stev-Button-Search px-4">Search</button>
+                    </div>
+                </form>
         </div>
         <div class="container mt-4">
             <div class="row mt-4">

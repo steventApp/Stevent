@@ -25,10 +25,16 @@ class HomeController extends Controller
     public function index()
     {
         $events = Events::all();
-        return view('home', ['events' => $events]);
+        $search = "";
+        return view('home', ['events' => $events, 'search' => $search]);
     }
     public function event($id){
         $events = Events::find($id);
         return view('event', ['events' => $events]);
+    }
+    public function search(Request $request){
+        $events = Events::where('judul','like','%'.$request->search.'%')->get();
+        $search = $request->search;
+        return view('home', ['events' => $events, 'search' => $search]);
     }
 }

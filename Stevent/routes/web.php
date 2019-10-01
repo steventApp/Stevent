@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@search')->name('home.search');
 Route::get('/event/{id_event}', 'HomeController@event')->name('event');
 Route::prefix('organizers')->group(function(){
     Route::get('/home', 'OrganizersController@index')->name('organizers.home');
