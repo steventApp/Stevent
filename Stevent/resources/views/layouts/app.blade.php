@@ -52,7 +52,7 @@
                             @endif
                         @else
                             <li>
-                                <a href="#" class="nav-link text-light mx-3"><span class="fa fa-ticket" aria-hidden="true"></span></a>
+                                <a href="{{route('myTicket')}}" class="nav-link text-light mx-3"><span class="fa fa-ticket" aria-hidden="true"></span></a>
                             </li>
                             <li>
                                 <a href="#" class="nav-link text-light mx-3"><span class="fa fa-bell" aria-hidden="true"></span></a>
@@ -63,7 +63,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/organizers/home">
+                                    <a class="dropdown-item" href="{{route('organizers.index')}}">
                                         Organizers
                                     </a>
 
@@ -88,5 +88,14 @@
             @yield('content')
         </main>
     </div>
+    <script>
+        if(localStorage.getItem("token")) {
+            let decoded = jwt_decode(localStorage.getItem("token"));
+            window.Echo.private(`App.User.`+decoded.sub)
+                .notification((notification) => {
+                console.log(notification);
+            });
+        }
+    </script>
 </body>
 </html>

@@ -12,7 +12,8 @@
     font-family: "RubikMonoOne";
 }
 body{
-    font-family: "Roboto" !important;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 .Stev-Button-Search{
     background-color: #ED4C67;
@@ -37,6 +38,25 @@ body{
 }
 .Stev-card-paragraph{
     font-size: 10pt;
+}
+
+/* tambahan alpi */
+.Stev-ticket-status-confirmed{
+    color: #39FF14;
+}
+.Stev-ticket-status-pending{
+    color: #FC6600;
+}
+.Stev-ticket-jadwal{
+    float: right;
+    margin-right: 40px;
+    margin-top: 18px;
+    text-align: center;
+}
+.Stev-ticket-jadwal-tanggal{
+    font-size: 50px;
+    margin-top: -35px;
+    margin-bottom: -21px;
 }
 
 .Stev-event-background{
@@ -128,7 +148,9 @@ body{
 .hidden{
     display: none;
 }
-
+.Stev-organizers-create-event:hover{
+    text-decoration: none;
+}
 .Stev-organizers-create-event img{
     height: 300px;
     width: 230px;
@@ -170,4 +192,129 @@ body{
     color: white;
     font-size: 16pt;
     font-weight: bold;
+}
+.Stev-button{
+    background-color : #ED4C67;
+    color: white;
+}
+.Stev-button:hover{
+    background-color: #BE1733;
+    color: white;
+}
+
+.Stev-progressBar li{
+    list-style-type: none;
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+}
+.Stev-progressBar li:before{
+    width: 30px;
+    height: 30px;
+    content: counter(step);
+    counter-increment: step;
+    line-height: 30px;
+    border: 2px solid #7d7d7d;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+.Stev-progressBar li:after{
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+.Stev-progressBar li:first-child:after{
+    content: none;
+}
+.Stev-progressBar li.active{
+    color: green;
+}
+.Stev-progressBar li.active:before{
+    border-color: #BE1733;
+    background-color: #ED4C67;
+    color: white;
+}
+.Stev-progressBar li.active + li:after{
+    background-color: #BE1733;
+}
+
+.Stev-dashboard-menu{
+    width: 100%;
+    min-height: 600px;
+    position: fixed;
+    background-color: #BE1733;
+    padding: 0 !important;
+}
+.Stev-dashboard-menu .button-menu{
+    width: 100%;
+    background-color: #BE1733;
+    color: white;
+    padding: 15px 30px;
+}
+.Stev-dashboard-menu .button-menu:hover{
+    background-color: rgb(150, 1, 26);
+    cursor: pointer;
+}
+.Stev-dashboard-menu .button-menu span{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.Stev-dashboard-content{
+    padding: 0 !important;
+}
+.Stev-dashboard-content .cover{
+    width: 100%;
+    height: 300px;
+    margin-left: -5px;
+}
+.Stev-dashboard-content .cover-black{
+    width: 100%;
+    height: 300px;
+    margin-left: -5px;
+    position: relative;
+    background-color: black;
+    opacity: 0.5;
+    margin-top: -300px;
+}
+.Stev-dashboard-content .title-box{
+    color: white;
+    padding: 0 100px;
+    position: relative;
+    margin-top: -150px;
+}
+.Stev-dashboard-content .time-section{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.Stev-dashboard-content .time-number{
+    font-size: 32pt;
+    margin-right: 10px;
+}
+.Stev-dashboard-content .time-unit{
+    font-size: 12pt;
+    margin-right: 20px;
+}
+.Stev-dashboard-conten .left-side{
+    border-radius: 10px 0 0 10px;
+    border : 2px solid #ED4C67 !important;
+}
+.Stev-dashboard-content .right-side{
+    border-radius: 0 10px 10px 0;
+}
+.Stev-input-file:hover{
+    cursor: pointer;
 }
