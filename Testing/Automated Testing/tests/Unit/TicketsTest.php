@@ -17,4 +17,12 @@ class TicketsTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    public function user_can_buy_ticket(){
+
+    }
+
+    public function user_can_see_ticket_they_buy(){
+        
+    }
 }
